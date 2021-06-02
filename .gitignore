@@ -1,0 +1,5 @@
+.idea
+*.class
+target/
+deploy.tmp
+dubbo-demo.iml

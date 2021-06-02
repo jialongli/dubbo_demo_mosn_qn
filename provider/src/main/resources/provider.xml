@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:qconfig="http://www.qunar.com/schema/qconfig"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+       http://www.qunar.com/schema/qconfig http://www.qunar.com/schema/qconfig.xsd">
+
+    <dubbo:application name="test" />
+
+    <dubbo:protocol id="p1" port="3154" />
+
+    <dubbo:registry id="registry1"  group="jltest" address="zk.dev.qunar.com:2181" protocol="zookeeper">
+    </dubbo:registry>
+
+    <dubbo:service id="service1" registry="registry1" protocol="p1" interface="com.imooc.springboot.dubbo.demo.DemoService" ref="testService" version="1.0.0">
+    </dubbo:service>
+
+    <bean id="testService" class="com.imooc.springboot.dubbo.demo.provider.DemoServiceImpl" />
+
+    <bean id="helloController" class="com.imooc.springboot.dubbo.demo.provider.TestController" />
+
+
+</beans>

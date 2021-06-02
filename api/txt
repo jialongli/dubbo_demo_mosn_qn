@@ -1,0 +1,14 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.imooc:dubbo-demo-api >----------------------
+[INFO] Building dubbo-demo-api 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ dubbo-demo-api ---
+[INFO] com.imooc:dubbo-demo-api:jar:1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.888 s
+[INFO] Finished at: 2021-06-01T15:12:55+08:00
+[INFO] ------------------------------------------------------------------------
