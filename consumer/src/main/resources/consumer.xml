@@ -3,13 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xmlns:qconfig="http://www.qunar.com/schema/qconfig"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       xsi:schemaLocation="http://www.springframework.org/schema/beans classpath:test_spring_beans.xsd
        http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
-       http://www.qunar.com/schema/qconfig http://www.qunar.com/schema/qconfig.xsd">
+       http://www.qunar.com/schema/qconfig classpath:qconfig.xsd">
 
     <dubbo:application name="test" />
-
-    <dubbo:registry id="r1" protocol="zookeeper" address="zk.dev.qunar.com:2181" group="jltest" >
+<!--    <dubbo:registry id="r1" protocol="zookeeper" address="127.0.0.1:2181" group="jltest" >-->
+    <dubbo:registry id="r1" protocol="zookeeper" address="10.244.1.194:2181" group="jltest" >
     </dubbo:registry>
 
     <dubbo:reference id="testService" registry="r1" interface="com.imooc.springboot.dubbo.demo.DemoService" version="1.0.0" timeout="5000" cluster="failfast" />

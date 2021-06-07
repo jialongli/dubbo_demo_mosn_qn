@@ -8,17 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
 public class DemoConsumerController {
-    //    @Reference(url = "dubbo://172.17.0.2:20880")
-//    @Reference(url = "dubbo://localhost:2045")
-    @Reference(url = "dubbo://localhost:2045",group = "testGroup", version = "12")
-    private DemoService demoService;
+
 
     @RequestMapping("/sayHello")
     public String sayHello(@RequestParam String name) {
-        String a = "aaaa";
-        return demoService.sayHello(name);
+        return "";
     }
 
     @RequestMapping("/decode")
