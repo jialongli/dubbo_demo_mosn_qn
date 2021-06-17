@@ -10,7 +10,6 @@ public class DemoServiceImpl implements DemoService {
 
 
     public String sayHello(String name) {
-        LOG.info("hell========server====");
         return "Hello, " + name + " (from Spring Boot)";
     }
 

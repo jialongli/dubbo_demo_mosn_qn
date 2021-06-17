@@ -14,8 +14,8 @@
     <dubbo:application name="test" />
 
     <dubbo:protocol id="p1" port="3154" />
-<!--    <dubbo:registry id="registry1"  group="jltest" address="127.0.0.1:2181" protocol="zookeeper">-->
-    <dubbo:registry id="registry1"  group="jltest" address="10.244.1.194:2181" protocol="zookeeper">
+    <dubbo:registry id="registry1"  group="jltest" address="10.93.38.157:2181" protocol="zookeeper">
+<!--    <dubbo:registry id="registry1"  group="jltest" address="zookeeper.qunar-mesh:2181" protocol="zookeeper">-->
     </dubbo:registry>
 
     <dubbo:service id="service1" registry="registry1" protocol="p1" interface="com.imooc.springboot.dubbo.demo.DemoService" ref="testService" version="1.0.0">
